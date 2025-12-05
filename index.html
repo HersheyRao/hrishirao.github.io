@@ -170,7 +170,7 @@
 
     <h3>Contextual Statement</h3>
     <p>
-      This artifact comes from my CMSC430 project, where we built a working compiler for a small functional programming language called Fraud. A compiler takes code written by a person and turns it into lower level instructions that a computer can actually run. In this project I wrote the part of the compiler that walks over the abstract syntax tree and generates x86 assembly for the main language features.
+      This artifact comes from my CMSC430 project, where we built a working compiler for a small functional programming language called Fraud. A compiler takes code written by a person and turns it into lower level instructions that a computer can actually run. In this project I wrote the part of the compiler that walks over the abstract syntax tree and generates a86 assembly for the main language features.
     </p>
     <p>
       In this file I handle expressions such as literals, primitive operations, if expressions, let and let* bindings, case expressions, lambdas, and function calls. For each form, the compiler has to decide what to put on the stack, which labels to create, and how to move values through registers so the runtime can understand them. For example, the case expression logic compiles one dispatch value, keeps it on the stack, and then generates code to compare it against each set of datums, jumping to the correct branch or the else clause. The let and let* code shows how new variables are pushed, added to the environment, and then cleaned up afterward.
