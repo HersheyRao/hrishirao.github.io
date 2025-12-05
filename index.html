@@ -170,13 +170,16 @@
 
     <h3>Contextual Statement</h3>
     <p>
-      This artifact comes from my CMSC430 project, where we built a working compiler for a small functional programming language called Fraud. A compiler takes code written by a person and turns it into lower level instructions that a computer can actually run. In this project I wrote the part of the compiler that walks over the abstract syntax tree and generates a86 assembly for the main language features.
+    This artifact comes from my CMSC430 project, where we built a working compiler for a small functional language called Fraud. A compiler takes code written by a person and turns it into instructions a machine can actually run. Working on something like this makes you deal directly with how languages, data, and memory work underneath the surface, since nothing hides the details for you.
     </p>
     <p>
-      In this file I handle expressions such as literals, primitive operations, if expressions, let and let* bindings, case expressions, lambdas, and function calls. For each form, the compiler has to decide what to put on the stack, which labels to create, and how to move values through registers so the runtime can understand them. For example, the case expression logic compiles one dispatch value, keeps it on the stack, and then generates code to compare it against each set of datums, jumping to the correct branch or the else clause. The let and let* code shows how new variables are pushed, added to the environment, and then cleaned up afterward.
+    My main role in the project was writing the part of the compiler that converts high level expressions such as if statements, let bindings, case expressions, functions, and function calls into x86 assembly. That involved generating labels, managing the stack, deciding how values move through registers, and making sure the compiled program follows the calling conventions the runtime expects. Even though the file is long, it is the center of the compiler because this is where a Fraud program actually becomes something the machine can execute.
     </p>
     <p>
-      I chose this as an artifact because it shows that I can work at the level where programming languages and hardware meet. For someone who is not technical, the easiest way to think about it is that this code is part of the “translator” that turns a high level language into concrete steps a machine can follow. It required careful attention to correctness, stack layout, and control flow, and it balances that detail with keeping the structure of the compiler understandable. Together with the other two artifacts, it shows that I can work across data science, game development, and low level systems work.
+    Zooming out, this project matters because it makes you think about how programming languages work at every level. Most programmers write code without thinking about how variables map to memory, how control flow jumps, or how function calls pass data around. Building a compiler makes all of that visible. For someone who is not technical, the easiest way to understand this project is to think of it as building the “translator” that lets humans talk to hardware.
+    </p>
+    <p>
+    I chose this artifact because it shows that I can work inside a large codebase, understand a custom language’s rules, and implement them reliably in assembly. It also pairs well with my other projects, since it represents the low level, systems side of what I can do, complementing the data science work in Artifact 1 and the Unity engineering in Artifact 2.
     </p>
 
     <h3>Code Snippet</h3>
