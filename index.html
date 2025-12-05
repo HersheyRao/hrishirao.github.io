@@ -43,6 +43,10 @@
       padding-bottom: 8px;
       margin-bottom: 15px;
     }
+    h3 {
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
     a {
       color: #4db8ff;
     }
@@ -52,6 +56,9 @@
       padding: 20px;
       margin-top: 40px;
       font-size: 0.9rem;
+    }
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -69,14 +76,14 @@
   <section>
     <h2>Welcome</h2>
     <p>[[Write 1–2 paragraphs introducing who you are, what this portfolio is, and what readers will find here.]]</p>
-    <p>[[Explain how to navigate the page (video, artifacts, contextual statements).]]</p>
+    <p>[[Explain how to navigate the page: video, Artifact 1, Artifact 2, Artifact 3.]]</p>
   </section>
 
   <!-- VIDEO INTRO -->
   <section>
     <h2>Video Introduction</h2>
-    <p>[[Describe what your video covers.]]</p>
-    <p>[[Paste your video embed code here when ready.]]</p>
+    <p>[[Describe what your video covers and how it connects the artifacts.]]</p>
+    <p>[[Paste your video embed code here when you have it.]]</p>
   </section>
 
   <!-- ARTIFACT 1 -->
@@ -102,22 +109,46 @@
 
   <!-- ARTIFACT 2 -->
   <section>
-    <h2>Artifact 2</h2>
-    <p>[[Describe Artifact 2 briefly.]]</p>
+    <h2>Artifact 2: Procedural Roguelite Dungeon Game (Unity)</h2>
+
+    <p>
+      <strong>Download links:</strong><br>
+      Windows build:
+      <a href="https://drive.google.com/drive/folders/1msKisvRfyTuTe2g4pgZl79cBMLz0tbm1?usp=sharing" target="_blank">
+        Google Drive (Windows)
+      </a><br>
+      Mac build:
+      <a href="https://drive.google.com/drive/folders/1FtyaBPDA26URHBeGGaxts9PaxIkSIRwQ?usp=sharing" target="_blank">
+        Google Drive (Mac)
+      </a>
+    </p>
+
+    <h3>Installation Instructions</h3>
+    <p>
+      The title of the application is <strong>new1</strong>. By downloading the folder and then launching the <strong>new1</strong> executable, the game should run.
+    </p>
+
     <h3>Contextual Statement</h3>
-    <p>[[Write Context Paragraph 1.]]</p>
-    <p>[[Write Context Paragraph 2.]]</p>
-    <p>[[Write Context Paragraph 3 if needed.]]</p>
+    <p>
+      This artifact is a roguelite dungeon game my group built for CMSC425 using Unity 6 and C#. The player spawns in a maze, fights bats and golems, and picks an augment after clearing the room. We made almost everything using basic Unity shapes and textures we drew ourselves. The goal was to build a simple dungeon environment that still fit a fantasy theme. We also used ideas from class like tremble effects for the bats and basic audio changes for the attacks and environment.
+    </p>
+    <p>
+      The maze is created with a procedural system that starts with one room in the center and then places several more around it in a grid. Each room prefab has openings on four sides. When a new room is placed, the generator checks if the entrances line up. If the room is on the outside edge, unused openings are filled with walls so the layout still makes sense. The game also randomizes the number of enemies and where they spawn inside each room. Some rooms might only have a couple of bats, while others can have a mix of bats and golems spread across the space. This keeps the layout and the difficulty different every time the player loads in. Inside the rooms, the bats move unpredictably and fire magic at random, while the golems walk around until the player gets close and then chase. The movement and enemy behavior are simple but work well together, and the augment system gives the player different options for how to approach later rooms.
+    </p>
+    <p>
+      This artifact fits my portfolio because it shows I can work on a full game loop, not just small pieces. It includes level generation, enemy randomness, enemy behavior, player upgrades, and the basic visuals needed to tie everything together. It also shows that I can think about how players experience the game, not only whether the code runs. The project required programming, teamwork, and attention to how the systems fit together, and it produced a playable result that someone can understand immediately.
+    </p>
   </section>
 
   <!-- ARTIFACT 3 -->
   <section>
     <h2>Artifact 3</h2>
-    <p>[[Describe Artifact 3 briefly.]]</p>
+    <p>[[Describe Artifact 3 briefly. For example, another project, essay, or assignment you want to highlight.]]</p>
+
     <h3>Contextual Statement</h3>
-    <p>[[Write Context Paragraph 1.]]</p>
-    <p>[[Write Context Paragraph 2.]]</p>
-    <p>[[Write Context Paragraph 3 if needed.]]</p>
+    <p>[[Write Context Paragraph 1 explaining when, where, and why you made Artifact 3.]]</p>
+    <p>[[Write Context Paragraph 2 explaining what skills or knowledge it shows.]]</p>
+    <p>[[Write Context Paragraph 3 if needed, connecting it to your larger goals or identity.]]</p>
   </section>
 
 </main>
