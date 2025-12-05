@@ -241,7 +241,108 @@
         (Label 'entry)
         (Mov r11 rbx)
         (Sub rsp (* 8 14))
-        ...</code></pre>
+        (Mov (Mem rsp 0)   r12)
+        (Mov (Mem rsp 8)   r13)
+        (Mov (Mem rsp 16)  r14)
+        (Mov (Mem rsp 24)  r15)
+        (Mov (Mem rsp 32)  rbx)
+        (Mov (Mem rsp 40)  rbp)
+        (Mov (Mem rsp 48)  rdi)
+        (Mov (Mem rsp 56)  rsi)
+        (Mov (Mem rsp 64)  r8)
+        (Mov (Mem rsp 72)  r9)
+        (Mov (Mem rsp 80)  r10)
+        (Mov (Mem rsp 88)  r11)
+        (Mov (Mem rsp 96)  rax)
+        (Mov (Mem rsp 104) rcx)
+        (Mov (Mem rsp 112) rdx)
+        (Mov rbx r11)
+        (compile-e e '())
+        (Mov r12 (Mem rsp 0))
+        (Mov r13 (Mem rsp 8))
+        (Mov r14 (Mem rsp 16))
+        (Mov r15 (Mem rsp 24))
+        (Mov rbx (Mem rsp 32))
+        (Mov rbp (Mem rsp 40))
+        (Mov rdi (Mem rsp 48))
+        (Mov rsi (Mem rsp 56))
+        (Mov r8  (Mem rsp 64))
+        (Mov r9  (Mem rsp 72))
+        (Mov r10 (Mem rsp 80))
+        (Mov r11 (Mem rsp 88))
+        (Mov rax (Mem rsp 96))
+        (Mov rcx (Mem rsp 104))
+        (Mov rdx (Mem rsp 112))
+        (Add rsp (* 8 14))
+        (Ret)))
+
+;; Expr CEnv -> Asm
+(define (compile-e e cenv)
+  (match e
+    [(Lit d)
+     (compile-datum d)]
+
+    [(Prim0 p)
+     (compile-op0 p)]
+
+    [(Prim1 p e1)
+     (seq (compile-e e1 cenv)
+          (compile-op1 p))]
+
+    [(Prim2 p e1 e2)
+     (seq (compile-e e1 cenv)
+          (Push rax)
+          (compile-e e2 (cons #f cenv))
+          (compile-op2 p))]
+
+    [(Case e ds es el)
+     (let* ([m (length ds)]
+            [l-end  (gensym 'case_end)]
+            [l-hits (build-list m (λ (_) (gensym 'case_hit)))])
+       (seq
+        (compile-e e cenv)
+        (Push rax)
+        (foldl
+         (λ (i acc)
+           (let* ([datums (list-ref ds i)]
+                  [l-next (gensym 'case_next)])
+             (seq acc
+                  (foldl
+                   (λ (d acc2)
+                     (seq acc2
+                          (Mov rax (Mem 0 rsp))
+                          (Mov r9  (value->bits d))
+                          (Cmp rax r9)
+                          (Je (list-ref l-hits i))))
+                   (seq)
+                   datums)
+                  (Jmp l-next)
+                  (Label (list-ref l-hits i))
+                  (compile-e (list-ref es i) cenv)
+                  (Jmp l-end)
+                  (Label l-next))))
+         (seq)
+         (range 0 m))
+        (compile-e el cenv)
+        (Label l-end)
+        (Add rsp 8)))]
+
+    [(Let x e1 e2)
+     (let* ([n (length x)]
+            [c* (append (reverse x) cenv)])
+       (seq
+        (for/fold ([acc (seq)]) ([ei e1])
+          (seq acc
+               (compile-e ei cenv)
+               (Push rax)))
+        (compile-e e2 c*)
+        (Add rsp (* 8 n))))]
+
+    [(Var x)
+     (seq (Mov rax rsp)
+          (Add rax (lookup x cenv))
+          (Mov rax (Mem 0 rax)))]))
+</code></pre>
 
 </section>
 
