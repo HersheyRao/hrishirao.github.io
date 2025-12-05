@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[[YOUR NAME]] – ENGL ePortfolio</title>
+  <title>Hrishikesh "Hershey" Rao – ePortfolio</title>
 
   <style>
     body {
@@ -14,21 +14,47 @@
       padding: 0;
       line-height: 1.6;
     }
+
     header {
       padding: 20px;
       text-align: center;
       background: #111728;
       border-bottom: 1px solid #2a3248;
     }
+
+    nav {
+      background: #111728;
+      border-bottom: 1px solid #2a3248;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #4db8ff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #70c8ff;
+    }
+
     h1 {
       margin: 0;
       font-size: 2rem;
     }
+
     main {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     section {
       margin-bottom: 40px;
       padding: 20px;
@@ -36,6 +62,7 @@
       border-radius: 8px;
       border: 1px solid #2a3248;
     }
+
     h2 {
       margin-top: 0;
       font-size: 1.4rem;
@@ -43,13 +70,16 @@
       padding-bottom: 8px;
       margin-bottom: 15px;
     }
+
     h3 {
       margin-top: 15px;
       font-size: 1.1rem;
     }
+
     a {
       color: #4db8ff;
     }
+
     footer {
       text-align: center;
       color: #888;
@@ -57,8 +87,15 @@
       margin-top: 40px;
       font-size: 0.9rem;
     }
-    ul {
-      padding-left: 20px;
+
+    pre {
+      overflow-x: auto;
+      background: #0a0f1f;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #2a3248;
+      color: #c7c7c7;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -70,120 +107,122 @@
   <div>Computer Science Major graduating from UMD in 2026 with a specialization in Cybersecurity</div>
 </header>
 
+<!-- Navigation -->
+<nav>
+  <a href="#welcome">Welcome</a>
+  <a href="#video">Video</a>
+  <a href="#artifact1">Artifact 1</a>
+  <a href="#artifact2">Artifact 2</a>
+  <a href="#artifact3">Artifact 3</a>
+</nav>
+
 <main>
 
-   <!-- WELCOME -->
-  <section>
-    <h2>Welcome</h2>
-    <p>
-      This portfolio brings together a few projects that show how I work as a student and as a programmer. The first artifact is a data science tutorial that walks through the full pipeline on a real League of Legends dataset. The second is a Unity roguelite that focuses on movement, procedural generation, and enemy behavior. The third is a compiler project from a compiler class that translates a small functional language into a86 assembly. Taken together, they show that I can move between high level programming ideas and low level details and explain what I am doing in an understandable way.
-    </p>
-    <p>
-      You can start by watching the video introduction, which gives a quick overview of why I picked these projects and what they say about how I work. After that, each artifact has its own section with the project link and a short explanation of what I did and why it matters. You can read the page straight through or jump to whatever area interests you. The main goal is to show the range of work I have done, from data and modeling to game development to low level systems.
-    </p>
-  </section>
+<!-- WELCOME -->
+<section id="welcome">
+  <h2>Welcome</h2>
+  <p>
+    This portfolio brings together a few projects that show how I work as a student and as a programmer. The first artifact is a data science tutorial that walks through the full pipeline on a real League of Legends dataset. The second is a Unity roguelite that focuses on movement, procedural generation, and enemy behavior. The third is a compiler project from a compiler class that translates a small functional language into a86 assembly. Taken together, they show that I can move between high level programming ideas and low level details and explain what I am doing in an understandable way.
+  </p>
+  <p>
+    You can start by watching the video introduction, which gives a quick overview of why I picked these projects and what they say about how I work. After that, each artifact has its own section with the project link and a short explanation of what I did and why it matters. You can read the page straight through or jump to whatever area interests you. The main goal is to show the range of work I have done, from data and modeling to game development to low level systems.
+  </p>
+</section>
 
- <!-- VIDEO INTRODUCTION -->
-  <section>
-    <h2>Video Introduction</h2>
+<!-- VIDEO INTRO -->
+<section id="video">
+  <h2>Video Introduction</h2>
+  <p>
+    This short video gives an overview of who I am as a student and why I selected the three artifacts in this portfolio.
+  </p>
 
-    <p>
-      This short video gives an overview of who I am as a student and why I selected the three artifacts in this portfolio.
-    </p>
+  <div style="margin-top: 1rem;">
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+            title="Portfolio Video Introduction"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+  </div>
+</section>
 
-    <div class="video-container" style="margin-top: 1rem;">
-      <!-- Replace the URL below with your actual YouTube link -->
-      <iframe width="560" height="315" 
-              src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
-              title="Portfolio Video Introduction" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen>
-      </iframe>
-    </div>
-  </section>
+<!-- ARTIFACT 1 -->
+<section id="artifact1">
+  <h2>Artifact 1: League of Legends Challenger Data Science Tutorial</h2>
 
-  <!-- ARTIFACT 1 -->
-  <section>
-    <h2>Artifact 1: League of Legends Challenger Data Science Tutorial</h2>
+  <p>
+    <strong>Link to project:</strong><br>
+    <a href="https://hersheyrao.github.io/" target="_blank">https://hersheyrao.github.io/</a>
+  </p>
 
-    <p>
-      <strong>Link to project:</strong><br>
-      <a href="https://hersheyrao.github.io/" target="_blank">https://hersheyrao.github.io/</a>
-    </p>
+  <h3>Contextual Statement</h3>
+  <p>
+    This artifact is a data science tutorial website I built for CMSC320 that walks through the full data science pipeline using the then current official League of Legends Challenger dataset. I pulled data from the Riot Games API for all 300 North American Challenger players, cleaned it into a pandas dataframe, and then walked through exploratory analysis, visualizations, and basic machine learning modeling. The site is written as a step by step notebook style guide so a reader can see the raw API pulls, the code to shape the data, and the final plots and statistics in one place.
+  </p>
+  <p>
+    This project shows that I can handle the technical side of data science and explain it in an understandable way. I had to work around API rate limits, design and test model ideas, and use pandas, NumPy, matplotlib, and seaborn to explore relationships like win rate versus league points and total games played. I also had to decide which results were meaningful instead of flooding the page with graphs. The write up also forced me to translate numbers into plain language so someone who cares about League of Legends but is not a data scientist can still follow along.
+  </p>
+  <p>
+    This artifact fits my portfolio because it combines something I actually care about, high level League of Legends play, with legitimate work in data science. It shows I can take an open ended question, build my own dataset, and carry it from collection to interpretation on my own. It also shows that I can present technical work in a public facing format, which is important for jobs where you have to communicate results to nontechnical audiences.
+  </p>
+</section>
 
-    <h3>Contextual Statement</h3>
-    <p>
-      This artifact is a data science tutorial website I built for CMSC320 that walks through the full data science pipeline using the then current official League of Legends Challenger dataset. I pulled data from the Riot Games API for all 300 North American Challenger players, cleaned it into a pandas dataframe, and then walked through exploratory analysis, visualizations, and basic machine learning modeling. The site is written as a step by step notebook style guide so a reader can see the raw API pulls, the code to shape the data, and the final plots and statistics in one place.
-    </p>
-    <p>
-      This project shows that I can handle the technical side of data science and explain it in an understandable way. In this project, I had to manage API rate limits, design models for the data, and then use pandas, NumPy, matplotlib, and seaborn to explore relationships like win rate versus league points, total games played, and veteran status. I also had to decide which results actually mattered, and not just dump graphs on the reader. Lastly, I used various machine learning models on the data in order to attempt to further understand the relationships between these variables. In addition, the write up forces me to translate code and numbers into plain language so that someone who cares about League of Legends but is not a data scientist can still follow what is going on.
-    </p>
-    <p>
-      This artifact fits my portfolio because it combines something I actually care about, high level League of Legends play, with legitimate work in data science. It shows I can take an open ended question, build my own dataset, and carry it from collection to interpretation without being spoon fed instructions. It also shows that I am comfortable presenting technical work in a public facing format, which is important for jobs where you have to communicate results to non technical people.
-    </p>
-  </section>
+<!-- ARTIFACT 2 -->
+<section id="artifact2">
+  <h2>Artifact 2: Wild Wild Magic (Roguelite Dungeon Game)</h2>
 
-  <!-- ARTIFACT 2 -->
-  <section>
-    <h2>Artifact 2: Wild Wild Magic (Roguelite Dungeon Game)</h2>
+  <p>
+    <strong>Download links:</strong><br>
+    Windows build:
+    <a href="https://drive.google.com/drive/folders/1msKisvRfyTuTe2g4pgZl79cBMLz0tbm1?usp=sharing" target="_blank">Google Drive (Windows)</a><br>
+    Mac build:
+    <a href="https://drive.google.com/drive/folders/1FtyaBPDA26URHBeGGaxts9PaxIkSIRwQ?usp=sharing" target="_blank">Google Drive (Mac)</a>
+  </p>
 
-    <p>
-      <strong>Download links:</strong><br>
-      Windows build:
-      <a href="https://drive.google.com/drive/folders/1msKisvRfyTuTe2g4pgZl79cBMLz0tbm1?usp=sharing" target="_blank">
-        Google Drive (Windows)
-      </a><br>
-      Mac build:
-      <a href="https://drive.google.com/drive/folders/1FtyaBPDA26URHBeGGaxts9PaxIkSIRwQ?usp=sharing" target="_blank">
-        Google Drive (Mac)
-      </a>
-    </p>
+  <h3>Installation Instructions</h3>
+  <p>
+    The title of the application is <strong>new1</strong>. By downloading the folder and launching the <strong>new1</strong> executable, the game should run.
+  </p>
 
-    <h3>Installation Instructions</h3>
-    <p>
-      The title of the application is <strong>new1</strong>. By downloading the folder and then launching the <strong>new1</strong> executable, the game should run.
-    </p>
+  <h3>Contextual Statement</h3>
+  <p>
+    This artifact is a roguelite dungeon game my group built for CMSC425 using Unity 6 and C#. The player spawns in a maze, fights bats and golems, and picks an augment after clearing the room. We made almost everything using basic Unity shapes and textures we drew ourselves. The goal was to build a simple dungeon environment that still fit a fantasy theme. We also used ideas from class like tremble effects for the bats and simple audio manipulation for the player’s attacks and the environment.
+  </p>
+  <p>
+    The maze is built using procedural generation. The game places a starting room at the center, then randomly places additional rooms around it on a grid. Each prefab has openings on four sides, and the generator checks which entrances should remain open. If a room is placed at an outside edge, any unused openings are filled with walls so the maze remains consistent. The game also randomizes the number and placement of enemies. Some rooms may have only a couple of bats while others may contain multiple bats and golems. This keeps each run slightly different.
+  </p>
+  <p>
+    This artifact fits my portfolio because it shows I can work on a complete game loop and handle interaction between multiple systems: procedural generation, enemy behavior, movement, upgrades, and visuals. It required programming, teamwork, and attention to how the parts fit together. The game is simple, but it is fully playable and easy for someone to understand immediately.
+  </p>
+</section>
 
-    <h3>Contextual Statement</h3>
-    <p>
-      This artifact is a roguelite dungeon game my group built for CMSC425 using Unity 6 and C#. The player spawns in a maze, fights bats and golems, and picks an augment after clearing the room. We made almost everything using basic Unity shapes and textures we drew ourselves. The goal was to build a simple dungeon environment that still fit a fantasy theme. We also used ideas from class like tremble effects for the bats and basic audio changes for the attacks and environment.
-    </p>
-    <p>
-      The maze is created with a procedural system that starts with one room in the center and then places several more around it in a grid. Each room prefab has openings on four sides. When a new room is placed, the generator checks if the entrances line up. If the room is on the outside edge, unused openings are filled with walls so the layout still makes sense. The game also randomizes the number of enemies and where they spawn inside each room. Some rooms might only have a couple of bats, while others can have a mix of bats and golems spread across the space. This keeps the layout and the difficulty different every time the player loads in. Inside the rooms, the bats move unpredictably and fire magic at random, while the golems walk around until the player gets close and then chase. The movement and enemy behavior are simple but work well together, and the augment system gives the player different options for how to approach later rooms.
-    </p>
-    <p>
-      This artifact fits my portfolio because it shows I can work on a full game loop, not just small pieces. It includes level generation, enemy randomness, enemy behavior, player upgrades, and the basic visuals needed to tie everything together. It also shows that I can think about how players experience the game, not only whether the code runs. The project required programming, teamwork, and attention to how the systems fit together, and it produced a playable result that someone can understand immediately.
-    </p>
-  </section>
+<!-- ARTIFACT 3 -->
+<section id="artifact3">
+  <h2>Artifact 3: Fraud Compiler</h2>
 
- <!-- ARTIFACT 3 -->
-  <section>
-    <h2>Artifact 3: Fraud Compiler</h2>
+  <p>
+    <strong>Download full project:</strong><br>
+    <a href="https://drive.google.com/file/d/1vfLfgU17F1McBwyvPVJZYcunr23TVaYt/view?usp=sharing" target="_blank">
+      CMSC430 compiler code (ZIP on Google Drive)
+    </a>
+  </p>
 
-    <p>
-      <strong>Download full project:</strong><br>
-      <a href="https://drive.google.com/file/d/1vfLfgU17F1McBwyvPVJZYcunr23TVaYt/view?usp=sharing" target="_blank">
-        CMSC430 compiler code (ZIP on Google Drive)
-      </a>
-    </p>
+  <h3>Contextual Statement</h3>
+  <p>
+    This artifact comes from my CMSC430 project, where we built a working compiler for a small functional language called Fraud. A compiler takes code written by a person and turns it into instructions a machine can actually run. Working on something like this makes you deal directly with how languages, data, and memory behave underneath the surface, since nothing hides the details for you.
+  </p>
+  <p>
+    My main role in the project was writing the part of the compiler that converts high level expressions such as if statements, let bindings, case expressions, functions, and function calls into <strong>a86 assembly</strong>. That involved generating labels, managing the stack, deciding how values move through registers, and making sure the compiled program follows the calling conventions the runtime expects. Even though the file is long, it is the center of the compiler because this is where a Fraud program actually becomes something the machine can execute.
+  </p>
+  <p>
+    Zooming out, this project matters because it forces you to think about how programming languages work at every level. Most programmers write code without thinking about how variables map to memory, how control flow jumps, or how function calls pass data around. Building a compiler makes all of that visible. For someone who is not technical, the simplest way to understand this project is to think of it as building the “translator” that lets humans talk to hardware.
+  </p>
+  <p>
+    I chose this artifact because it shows that I can work inside a large codebase, understand a custom language’s rules, and implement them reliably in assembly. It also pairs well with my other artifacts since it represents the low level, systems side of what I can do. It complements the data science work in Artifact 1 and the Unity engineering in Artifact 2.
+  </p>
 
-    <h3>Contextual Statement</h3>
-    <p>
-    This artifact comes from my CMSC430 project, where we built a working compiler for a small functional language called Fraud. A compiler takes code written by a person and turns it into instructions a machine can actually run. Working on something like this makes you deal directly with how languages, data, and memory work underneath the surface, since nothing hides the details for you.
-    </p>
-    <p>
-    My main role in the project was writing the part of the compiler that converts high level expressions such as if statements, let bindings, case expressions, functions, and function calls into a86 assembly. That involved generating labels, managing the stack, deciding how values move through registers, and making sure the compiled program follows the calling conventions the runtime expects. Even though the file is long, it is the center of the compiler because this is where a Fraud program actually becomes something the machine can execute.
-    </p>
-    <p>
-    Zooming out, this project matters because it makes you think about how programming languages work at every level. Most programmers write code without thinking about how variables map to memory, how control flow jumps, or how function calls pass data around. Building a compiler makes all of that visible. For someone who is not technical, the easiest way to understand this project is to think of it as building the “translator” that lets humans talk to hardware.
-    </p>
-    <p>
-    I chose this artifact because it shows that I can work inside a large codebase, understand a custom language’s rules, and implement them reliably in assembly. It also pairs well with my other projects, since it represents the low level, systems side of what I can do, complementing the data science work in Artifact 1 and the Unity engineering in Artifact 2.
-    </p>
-
-    <h3>Code Snippet</h3>
-    <pre><code>#lang racket
+  <h3>Code Snippet</h3>
+  <pre><code>#lang racket
 (provide compile
          compile-e)
 
@@ -202,102 +241,9 @@
         (Label 'entry)
         (Mov r11 rbx)
         (Sub rsp (* 8 14))
-        (Mov (Mem rsp 0)   r12)
-        (Mov (Mem rsp 8)   r13)
-        (Mov (Mem rsp 16)  r14)
-        (Mov (Mem rsp 24)  r15)
-        (Mov (Mem rsp 32)  rbx)
-        (Mov (Mem rsp 40)  rbp)
-        (Mov (Mem rsp 48)  rdi)
-        (Mov (Mem rsp 56)  rsi)
-        (Mov (Mem rsp 64)  r8)
-        (Mov (Mem rsp 72)  r9)
-        (Mov (Mem rsp 80)  r10)
-        (Mov (Mem rsp 88)  r11)
-        (Mov (Mem rsp 96)  rax)
-        (Mov (Mem rsp 104) rcx)
-        (Mov (Mem rsp 112) rdx)
-        (Mov rbx r11)
-        (compile-e e '())
-        (Mov r12 (Mem rsp 0))
-        (Mov r13 (Mem rsp 8))
-        (Mov r14 (Mem rsp 16))
-        (Mov r15 (Mem rsp 24))
-        (Mov rbx (Mem rsp 32))
-        (Mov rbp (Mem rsp 40))
-        (Mov rdi (Mem rsp 48))
-        (Mov rsi (Mem rsp 56))
-        (Mov r8  (Mem rsp 64))
-        (Mov r9  (Mem rsp 72))
-        (Mov r10 (Mem rsp 80))
-        (Mov r11 (Mem rsp 88))
-        (Mov rax (Mem rsp 96))
-        (Mov rcx (Mem rsp 104))
-        (Mov rdx (Mem rsp 112))
-        (Add rsp (* 8 14))
-        (Ret)))
+        ...</code></pre>
 
-;; Expr CEnv -> Asm
-(define (compile-e e cenv)
-  (match e
-    [(Lit d)
-     (compile-datum d)]
-    [(Prim0 p)
-     (compile-op0 p)]
-    [(Prim1 p e1)
-     (seq (compile-e e1 cenv)
-          (compile-op1 p))]
-    [(Prim2 p e1 e2)
-     (seq (compile-e e1 cenv)
-          (Push rax)
-          (compile-e e2 (cons #f cenv))
-          (compile-op2 p))]
-    [(Case e ds es el)
-     (let* ([m (length ds)]
-            [l-end  (gensym 'case_end)]
-            [l-hits (build-list m (λ (_) (gensym 'case_hit)))])
-       (seq
-        (compile-e e cenv)
-        (Push rax)
-        (foldl
-         (λ (i acc)
-           (let* ([datums (list-ref ds i)]
-                  [l-next (gensym 'case_next)])
-             (seq acc
-                  (foldl
-                   (λ (d acc2)
-                     (seq acc2
-                          (Mov rax (Mem 0 rsp))
-                          (Mov r9  (value->bits d))
-                          (Cmp rax r9)
-                          (Je (list-ref l-hits i))))
-                   (seq)
-                   datums)
-                  (Jmp l-next)
-                  (Label (list-ref l-hits i))
-                  (compile-e (list-ref es i) cenv)
-                  (Jmp l-end)
-                  (Label l-next))))
-         (seq)
-         (range 0 m))
-        (compile-e el cenv)
-        (Label l-end)
-        (Add rsp 8)))]
-    [(Let x e1 e2)
-     (let* ([n (length x)] [c* (append (reverse x) cenv)])
-       (seq
-        (for/fold ([acc (seq)]) ([ei e1])
-          (seq acc
-               (compile-e ei cenv)
-               (Push rax)))
-        (compile-e e2 c*)
-        (Add rsp (* 8 n))))]
-    [(Var x)
-     (seq (Mov rax rsp)
-          (Add rax (lookup x cenv))
-          (Mov rax (Mem 0 rax)))]))</code></pre>
-
-  </section>
+</section>
 
 </main>
 
